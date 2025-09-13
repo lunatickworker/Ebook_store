@@ -1,6 +1,11 @@
-const ReviewList = ({ reviews }: { reviews: any[] }) => {
+interface Review {
+  rating: number;
+  comment: string;
+}
+
+const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   return (
-    <div className="mt-8 space-y-6">
+    <div className="space-y-6">
       {reviews.length === 0 ? (
         <p className="text-sm text-gray-500">아직 등록된 리뷰가 없습니다.</p>
       ) : (

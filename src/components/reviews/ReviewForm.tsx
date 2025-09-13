@@ -1,8 +1,13 @@
 import { useState } from 'react';
 
-const ReviewForm = ({ onSubmit }: { onSubmit: (review: any) => void }) => {
-  const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState('');
+interface Review {
+  rating: number;
+  comment: string;
+}
+
+const ReviewForm = ({ onSubmit }: { onSubmit: (review: Review) => void }) => {
+  const [rating, setRating] = useState<number>(0);
+  const [comment, setComment] = useState<string>('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,7 +21,7 @@ const ReviewForm = ({ onSubmit }: { onSubmit: (review: any) => void }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 mt-6">
+    <form onSubmit={handleSubmit} className="space-y-4 mb-6">
       <div>
         <label className="block text-sm font-medium mb-1">별점</label>
         <div className="flex space-x-1 text-xl text-yellow-500">

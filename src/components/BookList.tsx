@@ -14,10 +14,13 @@ const BookList = ({ title, books }: BookListProps) => {
         {books.map((book) => (
           <BookCard
             key={book.id}
-            title={book.title}
-            image={book.image}
-            author={book.author}
             id={book.id}
+            title={book.title}
+            author={book.author}
+            coverImage={book.coverImage}
+            price={book.price}
+            rating={book.rating}
+            description={book.description}
           />
         ))}
       </div>
@@ -26,3 +29,4 @@ const BookList = ({ title, books }: BookListProps) => {
 };
 
 export default BookList;
+

@@ -15,7 +15,7 @@ interface BookCardProps {
 const BookCard = ({ title, coverImage, author, id }: BookCardProps) => {
   return (
     <div className={styles.card}>
-      <Link href={`/books/${id}`} passHref>
+      <Link href={`/books/${id}`} passHref legacyBehavior>
         <a className={styles.link}>
           <div className={styles.imageWrapper}>
             <Image
@@ -38,3 +38,4 @@ const BookCard = ({ title, coverImage, author, id }: BookCardProps) => {
 };
 
 export default BookCard;
+

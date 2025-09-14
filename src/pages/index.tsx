@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import LanguageSwitcher from '@/components/i18n/LanguageSwitcher';
 import HeroSection from '@/components/home/HeroSection';
@@ -38,4 +39,11 @@ const HomePage: NextPage = () => {
   );
 };
 
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'ko', ['common'])),
+  },
+});
+
 export default HomePage;
+

@@ -1,4 +1,3 @@
-// src/components/home/Footer.tsx
 import Link from 'next/link';
 
 const Footer = () => {
@@ -17,10 +16,10 @@ const Footer = () => {
         <div>
           <h4 className="text-md font-semibold mb-2">빠른 링크</h4>
           <ul className="text-sm space-y-1">
-            <li><Link href="/about" className="hover:underline">회사 소개</Link></li>
-            <li><Link href="/contact" className="hover:underline">문의하기</Link></li>
-            <li><Link href="/privacy" className="hover:underline">개인정보 처리방침</Link></li>
-            <li><Link href="/terms" className="hover:underline">이용약관</Link></li>
+            <li><Link href="/about" legacyBehavior><a>회사 소개</a></Link></li>
+            <li><Link href="/contact" legacyBehavior><a>문의하기</a></Link></li>
+            <li><Link href="/privacy" legacyBehavior><a>개인정보 처리방침</a></Link></li>
+            <li><Link href="/terms" legacyBehavior><a>이용약관</a></Link></li>
           </ul>
         </div>
 
@@ -28,9 +27,9 @@ const Footer = () => {
         <div>
           <h4 className="text-md font-semibold mb-2">팔로우하기</h4>
           <div className="flex space-x-4 text-xl">
-            <Link href="https://facebook.com" target="_blank" className="hover:text-white">📘</Link>
-            <Link href="https://twitter.com" target="_blank" className="hover:text-white">🐦</Link>
-            <Link href="https://instagram.com" target="_blank" className="hover:text-white">📸</Link>
+            <Link href="https://facebook.com" legacyBehavior><a target="_blank" className="hover:text-white">📘</a></Link>
+            <Link href="https://twitter.com" legacyBehavior><a target="_blank" className="hover:text-white">🐦</a></Link>
+            <Link href="https://instagram.com" legacyBehavior><a target="_blank" className="hover:text-white">📸</a></Link>
           </div>
         </div>
       </div>

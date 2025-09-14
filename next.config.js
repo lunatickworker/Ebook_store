@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   reactStrictMode: true,
   webpack: (config) => {
@@ -6,5 +8,10 @@ module.exports = {
       process: require.resolve('process/browser'),
     };
     return config;
+  },
+  i18n: {
+    locales: ['ko', 'en'],
+    defaultLocale: 'ko',
+    localeDetection: true,
   },
 };

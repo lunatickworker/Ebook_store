@@ -1,6 +1,4 @@
-// next.config.js
-
-import path from 'path';
+const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -15,8 +13,8 @@ const nextConfig = {
   i18n: {
     locales: ['ko', 'en'],
     defaultLocale: 'ko',
-    localeDetection: false, // This line is changed
+    localeDetection: false,
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

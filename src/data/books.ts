@@ -1,11 +1,11 @@
 export interface Book {
-  id: number
-  title: string
-  author: string
-  coverImage: string
-  price: number
-  rating: number
-  description: string
+  id: string | number;
+  title: string;
+  author: string;
+  coverImage: string;
+  price: number;
+  rating: number;
+  description: string;
 }
 
 export const popularBooks: Book[] = [

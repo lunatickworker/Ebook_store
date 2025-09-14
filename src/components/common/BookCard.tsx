@@ -3,20 +3,23 @@ import Link from 'next/link';
 import styles from './BookCard.module.css';
 
 interface BookCardProps {
+  id: string | number;
   title: string;
-  image: string;
   author: string;
-  id: string;
+  coverImage: string;
+  price: number;
+  rating: number;
+  description: string;
 }
 
-const BookCard = ({ title, image, author, id }: BookCardProps) => {
+const BookCard = ({ title, coverImage, author, id }: BookCardProps) => {
   return (
     <div className={styles.card}>
       <Link href={`/books/${id}`} passHref>
         <a className={styles.link}>
           <div className={styles.imageWrapper}>
             <Image
-              src={image}
+              src={coverImage}
               alt={`${title} 표지`}
               width={200}
               height={300}

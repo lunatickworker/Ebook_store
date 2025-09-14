@@ -1,4 +1,4 @@
-import BookCard from './common/BookCard'; // ✅ default import
+import BookCard from './common/BookCard';
 import { Book } from '@/data/books';
 
 interface BookListProps {
